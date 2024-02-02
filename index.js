@@ -1,13 +1,36 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+// initial concept: 
+
+/*  if (word[0] === word[word.length-1]) {
+    if (word[1] === word[word.length-2]) {
+      if (word[2] === word[word.length-3]) {
+        if (word[3] === word[word.length-4]) {
+          return true
+          
+        } else return false
+      } else return false
+    } else return false
+  } else return false */
+
+// looping version
+
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] !== word[word.length - 1 - i]) {
+      return false;
+    }
+  } 
+  return true;
+  
 }
 
 /* 
-  Add your pseudocode here
+  check first letter against last letter
+  if they match, check second letter against second to last letter
+  continue this until end of word
 */
 
 /*
-  Add written explanation of your solution here
+  loop through letters in "word", checking each for it's positional match on the opposite side of the word
 */
 
 // You can run `node index.js` to view these console logs
